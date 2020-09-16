@@ -59,13 +59,13 @@ services:
   notebook:
     build:
       context: notebook_image
-    image: phaustin/notebook:textbook
+    image: phaustin/notebook:sep15
     container_name: ${NOTEBOOK_CONTAINER_NAME}
 
   jupyterhub:
     build:
       context: hub_image
-    image: phaustin/jupyterhub:textbook2
+    image: phaustin/jupyterhub:sep15
     container_name: ${HUB_CONTAINER_NAME}
     depends_on:
       - notebook

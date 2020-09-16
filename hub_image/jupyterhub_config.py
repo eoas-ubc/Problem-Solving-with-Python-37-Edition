@@ -25,7 +25,7 @@ c.JupyterHub.hub_connect_ip = f"{HUB_CONTAINER_NAME}"
 # in it as our Hub.
 # c.DockerSpawner.image_whitelist = {'scipy':'phaustin/notebook:textbook',
 #                                    'pangeo':'phaustin/notebook:textbook'}
-c.DockerSpawner.image = "phaustin/notebook:textbook"
+c.DockerSpawner.image = "phaustin/notebook:sep15"
 # tell the user containers to connect to our docker network
 c.DockerSpawner.network_name = f"{NETWORK_NAME}"
 
@@ -36,7 +36,7 @@ c.DockerSpawner.remove = True
 # This is useful when running docker images that aren't built specifically for JupyterHub
 c.DockerSpawner.cmd = "jupyterhub-singleuser"
 # c.DockerSpawner.notebook_dir = '/'
-notebook_dir = "/home/jovyan/work"
+notebook_dir = "/home/jovyan/new_work"
 c.DockerSpawner.notebook_dir = notebook_dir
 # https://jupyterhub-dockerspawner.readthedocs.io/en/latest/api/index.html
 # c.DockerSpawner.default_url='/tree/home/{username}'

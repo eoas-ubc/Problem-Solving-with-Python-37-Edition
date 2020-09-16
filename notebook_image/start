@@ -2,9 +2,11 @@
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
-mkdir -p ${HOME}/work
-cd ${HOME}/work
-
+# this script is executed by root
+mkdir -p ${HOME}/start_work
+chown -R ${USER_NB}:${USER_NB} ${HOME}/start_work
+echo "running start"
+ls -lR ${HOME}/*
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
 exec "$@"
