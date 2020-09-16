@@ -57,9 +57,7 @@ services:
 # conda-lock -f environment.yml -p linux-64
 #
   notebook:
-    build:
-      context: notebook_image
-    image: phaustin/notebook:sep15
+    image: jupyter/base-notebook:notebook-6.1.3
     container_name: ${NOTEBOOK_CONTAINER_NAME}
 
   jupyterhub:
